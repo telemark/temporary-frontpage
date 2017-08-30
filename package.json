@@ -1,0 +1,62 @@
+{
+  "name": "temporary-frontpage",
+  "description": "Løsning for søknader om tilskudd",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.4.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
+    "test-offline": "standard && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/**/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install",
+    "standard-fix": "standard --fix",
+    "start": "serve public -p 8000",
+    "now-deploy": "now public --static -n temporary-frontpage && now alias"
+  },
+  "keywords": [
+    "microsite",
+    "Telemark fylkeskommune"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telemark/temporary-frontpage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/temporary-frontpage/issues"
+  },
+  "homepage": "https://github.com/telemark/temporary-frontpage.no",
+  "now": {
+    "name": "temporary-frontpage",
+    "alias": [
+      "temporary.service.t-fk.no"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "type": "npm"
+  },
+  "standard": {
+    "ignore": [
+      "public"
+    ]
+  },
+  "devDependencies": {
+    "coveralls": "2.13.1",
+    "nsp": "2.7.0",
+    "standard": "10.0.3",
+    "tap": "10.7.0"
+  },
+  "dependencies": {
+    "serve": "6.0.6"
+  }
+}
