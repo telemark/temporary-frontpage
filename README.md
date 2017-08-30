@@ -1,5 +1,7 @@
 # temporary-frontpage
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/temporary-frontpage.svg)](https://greenkeeper.io/)
+
 Base for temporary frontpage
 
 # Usage
