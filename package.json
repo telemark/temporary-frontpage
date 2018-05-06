@@ -57,6 +57,6 @@
     "tap": "11.1.4"
   },
   "dependencies": {
-    "serve": "6.0.6"
+    "serve": "6.5.6"
   }
 }
