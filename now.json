@@ -1,0 +1,10 @@
+{
+  "name": "temporary-frontpage",
+  "alias": [
+    "temporary.service.t-fk.no"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "type": "static"
+}
