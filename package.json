@@ -1,6 +1,6 @@
 {
   "name": "temporary-frontpage",
-  "description": "Løsning for søknader om tilskudd",
+  "description": "Temporary frontpage",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -11,17 +11,17 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=10.9.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
     "test-offline": "standard && tap --reporter=spec test/**/*.js",
     "coverage": "tap test/**/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install",
     "standard-fix": "standard --fix",
     "start": "serve public -p 8000",
-    "now-deploy": "now public --static -n temporary-frontpage && now alias"
+    "deploy": "now --static public --name temporary-frontpage && now alias",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "microsite",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/telemark/temporary-frontpage/issues"
   },
-  "homepage": "https://github.com/telemark/temporary-frontpage.no",
+  "homepage": "https://github.com/telemark/temporary-frontpage#readme",
   "now": {
     "name": "temporary-frontpage",
     "alias": [
@@ -43,7 +43,7 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "type": "npm"
+    "type": "static"
   },
   "standard": {
     "ignore": [

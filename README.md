@@ -8,8 +8,12 @@ Change index.html to suit your needs.
 
 # Deploy to Now
 
+Change [now.json](now.json) to match your environment.
+
+Run the deploy script
+
 ```
-$ npm run now-deploy
+$ npm run deploy
 ```
 
 # Docker
@@ -21,5 +25,3 @@ $ docker build -t temporary-frontpage .
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of temporary-frontpage](https://robots.kebabstudios.party/temporary-frontpage.png "Robohash image of temporary-frontpage")
