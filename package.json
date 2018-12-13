@@ -20,7 +20,7 @@
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
     "start": "serve public -p 8000",
-    "deploy": "now --static public --name temporary-frontpage && now alias",
+    "deploy": "now && now alias",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
     "now-build": "node --version"
   },
