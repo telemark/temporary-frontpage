@@ -21,7 +21,8 @@
     "standard-fix": "standard --fix",
     "start": "serve public -p 8000",
     "deploy": "now --static public --name temporary-frontpage && now alias",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
+    "now-build": "node --version"
   },
   "keywords": [
     "microsite",
